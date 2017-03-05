@@ -10,12 +10,37 @@ package doublelinkedlist;
  * @author Mike
  */
 public class DoubleLinkedList {
+    
+    private Link head;
+    private string size;
+    
+    
+    public DoubleLinkedList(){
+        head = null;
+        size = 0;
+                
+    }
+    
+    
+    public void addFront(int data){
+      if (head == null)
+          head = new Link(null, data, null);
+      else {
+          Link newLink = new Link(null, data, head);
+          head.previous = newLink;
+          head = newLink;
+      }
 
-    /**
-     * @param args the command line arguments
-     */
+    public boolean isEmpty(){
+        return head == null;
+    }
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        
+   
+     }
     }
     
 }
