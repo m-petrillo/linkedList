@@ -29,6 +29,11 @@ public class DoubleLinkedList {
           Link newLink = new Link(null, data, head);
           head.previous = newLink;
           head = newLink;
+          size++
+      }
+      
+      public int size() {
+          return size;
       }
 
     public boolean isEmpty(){
@@ -36,8 +41,10 @@ public class DoubleLinkedList {
     }
     
     public static void main(String[] args) {
-        
-        
+        DoubleLinkedList Car = new DoubleLinkedList();
+        Car.addFront(5);
+        Car.addFront(10);
+        Car.print();
         
    
      }
