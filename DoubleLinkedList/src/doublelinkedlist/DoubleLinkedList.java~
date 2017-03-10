@@ -12,7 +12,7 @@ package doublelinkedlist;
 public class DoubleLinkedList {
     
     private Link head;
-    private int size;
+    private string size;
     
     
     public DoubleLinkedList(){
@@ -45,10 +45,10 @@ public class DoubleLinkedList {
         DoubleLinkedList Car = new DoubleLinkedList();
         Car.addFront(5);
         Car.addFront(10);
-       // Car.print();
+        Car.print();
         
    
      }
     }
     
-
+}
