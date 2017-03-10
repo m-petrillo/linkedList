@@ -22,7 +22,7 @@ public class DoubleLinkedList {
     }
     
     
-    public void addFront(int data){
+    public void addFront(String data){
       if (head == null)
           head = new Link(data);
       else {
@@ -43,8 +43,8 @@ public class DoubleLinkedList {
     
     public static void main(String[] args) {
         DoubleLinkedList Car = new DoubleLinkedList();
-        Car.addFront(5);
-        Car.addFront(10);
+        Car.addFront("5");
+        Car.addFront("10");
        // Car.print();
         
    

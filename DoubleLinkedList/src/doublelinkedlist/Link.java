@@ -11,7 +11,7 @@ package doublelinkedlist;
  */
 public class Link {
     
-    private int data;
+    private String data;
     public Link previous;
     public Link next;
     
@@ -20,7 +20,7 @@ public class Link {
         this.data = data;
         next = null;
     }
-   public Link (Link previous, string data, Link next){
+   public Link (Link previous, String data, Link next){
        this.previous = previous;
        this.data = data;
        this.next = next;
