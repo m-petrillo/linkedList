@@ -33,6 +33,26 @@ public class DoubleLinkedList {
       }
     }
     
+     public void compareString(String data) {
+ 
+        if (head == null && tail == null) {
+            return head;
+        }
+        while (head != null && tail != null && head.data == tail.data) {
+            head = head.next;
+            tail = tail.next;
+        }
+     }
+     
+     public void travFwd(String data) {
+          if (head.previous != null)
+              head = head.next;
+     }
+     
+     
+     
+     
+    
       public int size() {
           return size;
       }
