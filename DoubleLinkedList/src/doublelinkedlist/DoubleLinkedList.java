@@ -60,7 +60,19 @@ public class DoubleLinkedList {
          }
      }
              
+     public void DelNode(String.data) {
+         if(head.next != null) 
+             head = head.previous;
+         size--;
      }
+
+
+
+
+
+
+
+}
      
      
     
