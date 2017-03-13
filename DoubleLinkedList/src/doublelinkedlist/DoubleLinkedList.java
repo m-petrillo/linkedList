@@ -47,9 +47,20 @@ public class DoubleLinkedList {
      public void travFwd(String data) {
           if (head.previous != null)
               head = head.next;
+          else{
+              return index;
+         }
      }
      
-     
+     public void travBck(String.data)  {
+         if(head.next != null)
+             head = head.back
+                     else {
+             return index;
+         }
+     }
+             
+     }
      
      
     
