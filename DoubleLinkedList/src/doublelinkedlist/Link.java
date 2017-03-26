@@ -12,8 +12,9 @@ package doublelinkedlist;
 public class Link {
     
     private String data;
-    public Link previous;
-    public Link next;
+    private Link previous;
+    private Link next;
+    private Link tail;
     
     public Link (String data){
         previous = null;
@@ -28,9 +29,33 @@ public class Link {
 
 }
 
-public String Data (){
+public String getData (){
     return data;
 }
+
+public void setData (String str){
+    data = str;
+}
+
+public Link getNext(){
+    return next;
+}
+
+public void setNext(Link newLink){
+    next = newLink;
+}
+
+public Link getPrevious(){
+    return previous;
+}
+
+public void setPrevious(Link newLink){
+    previous = newLink;
+    
+}
+
+
+   
 }
 
 

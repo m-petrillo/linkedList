@@ -12,7 +12,10 @@ package doublelinkedlist;
 public class DoubleLinkedList {
     
     private Link head;
-    private int size;
+    private Link tail;
+    private int size = 0;
+    private int index;
+    
     
     
     public DoubleLinkedList(){
@@ -22,61 +25,67 @@ public class DoubleLinkedList {
     }
     
     
-    public void addFront(String data){
-      if (head == null)
-          head = new Link(data);
-      else {
-          Link newLink = new Link(null, data, head);
-          head.previous = newLink;
-          head = newLink;
-          size++;
-      }
-    }
     
-     public void compareString(String data) {
+    public void addFront(String data){
+        Link newLink = new Link(data);
+        if(head == null)
+            tail = newLink;
+        else{
+            head.setPrevious(newLink);
+        }
+        newLink.setNext(head);
+        head = newLink;
+        }
+
+            
+    
+    
+     public boolean compareString(String data) {
  
         if (head == null && tail == null) {
-            return head;
-        }
-        while (head != null && tail != null && head.data == tail.data) {
-            head = head.next;
-            tail = tail.next;
-        }
+            return true ;
+            }
+        else
+            return false;
+        
+        //while (head != null && tail != null && head.data == tail.data) {
+           // head = head.next;
+            //tail = tail.next;
+        
      }
      
-     public void travFwd(String data) {
-          if (head.previous != null)
-              head = head.next;
-          else{
-              return index;
+     public void travFwd () {
+         Link current = head;
+         while(current != null){
+             System.out.println(current.getData());
+                   current = current.getNext();
          }
+         
      }
      
-     public void travBck(String.data)  {
-         if(head.next != null)
-             head = head.back
-                     else {
-             return index;
-         }
+     
+     
+     
+     public void travBck()  {
+        Link current = tail;
+        while (current != null){
+            System.out.println(current.getData());
+            current= current.getPrevious();
+        }
      }
              
-     public void DelNode(String.data) {
-         if(head.next != null) 
-             head = head.previous;
-         size--;
+     public void DelNode(String data) {
+         if(head==null) {
+             return;
+         }
+         else
+         {
+         head=head.getNext();
      }
-
-
-
-
-
-
-
 }
      
      
-    
-      public int size() {
+    public int size() {
           return size;
       }
 
@@ -88,8 +97,16 @@ public class DoubleLinkedList {
         DoubleLinkedList Car = new DoubleLinkedList();
         Car.addFront("5");
         Car.addFront("10");
-       // Car.print();
+        Car.addFront("200");
+        Car.addFront("55");
+        Car.addFront("67");
+        Car.addFront("92");
+        System.out.println(Car.size());
+      Car.travBck();
+        Car.travFwd();
         
+     
+      
    
      }
     }
