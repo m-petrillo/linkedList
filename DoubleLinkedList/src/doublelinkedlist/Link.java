@@ -28,7 +28,7 @@ public class Link {
        
 
 }
-
+//Sets up what gets returned when each link is called
 public String getData (){
     return data;
 }

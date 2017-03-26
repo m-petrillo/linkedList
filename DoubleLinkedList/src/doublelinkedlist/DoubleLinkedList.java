@@ -25,7 +25,7 @@ public class DoubleLinkedList {
     }
     
     
-    
+    //adds to front of list
     public void addFront(String data){
         Link newLink = new Link(data);
         if(head == null)
@@ -39,7 +39,7 @@ public class DoubleLinkedList {
 
             
     
-    
+    //compares list nodes
      public boolean compareString(String data) {
  
         if (head == null && tail == null) {
@@ -48,12 +48,10 @@ public class DoubleLinkedList {
         else
             return false;
         
-        //while (head != null && tail != null && head.data == tail.data) {
-           // head = head.next;
-            //tail = tail.next;
+        
         
      }
-     
+     //traverse forward method
      public void travFwd () {
          Link current = head;
          while(current != null){
@@ -65,7 +63,7 @@ public class DoubleLinkedList {
      
      
      
-     
+     //traverse back method
      public void travBck()  {
         Link current = tail;
         while (current != null){
@@ -73,7 +71,7 @@ public class DoubleLinkedList {
             current= current.getPrevious();
         }
      }
-             
+      //delete node method       
      public void DelNode(String data) {
          if(head==null) {
              return;
